@@ -78,8 +78,8 @@ DATABASES = {
       'default': {
             'ENGINE': 'django.db.backends.postgresql',
             'NAME': 'macroc',
-            'USER': '',       # windows/linux-only
-            'PASSWORD': '', # windows/linux-only
+            'USER': 'postgres',       # windows/linux-only
+            'PASSWORD': 'Hermes770', # windows/linux-only
       }
 }
 
@@ -129,3 +129,6 @@ LOGOUT_REDIRECT_URL = '/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
